@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+group 'com.github.nyukhalov'
+version '1.0.0'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
