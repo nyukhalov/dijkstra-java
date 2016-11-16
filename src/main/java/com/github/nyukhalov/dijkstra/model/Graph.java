@@ -16,7 +16,7 @@ public class Graph<T> {
         return edges;
     }
 
-    public void addEdge(Vertex<T> source, Vertex<T> destination, int weight) {
+    public void addEdge(T source, T destination, int weight) {
         addEdge(new Edge<>(source, destination, weight));
     }
 

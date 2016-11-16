@@ -7,7 +7,7 @@ public class Edge<T> {
     private final Vertex<T> destination;
     private final int weight;
 
-    public Edge(Vertex<T> source, Vertex<T> destination, int weight) {
+    public Edge(T source, T destination, int weight) {
         Objects.requireNonNull(source);
         Objects.requireNonNull(destination);
 
@@ -15,8 +15,8 @@ public class Edge<T> {
             throw new IllegalArgumentException("Weight must be greater than (or equals to) 0");
         }
 
-        this.source = source;
-        this.destination = destination;
+        this.source = new Vertex<>(source);
+        this.destination = new Vertex<>(destination);
         this.weight = weight;
     }
 

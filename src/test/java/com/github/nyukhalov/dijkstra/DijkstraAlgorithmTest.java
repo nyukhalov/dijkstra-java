@@ -50,6 +50,6 @@ public class DijkstraAlgorithmTest {
     }
 
     private Edge<String> createEdge(String source, String destination, int weight) {
-        return new Edge<>(new Vertex<>(source), new Vertex<>(destination), weight);
+        return new Edge<>(source, destination, weight);
     }
 }

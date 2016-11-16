@@ -17,7 +17,7 @@ public class GraphTest {
     @Test
     public void testAddingEdgeByVertexes() throws Exception {
         Graph<String> graph = new Graph<>();
-        graph.addEdge(new Vertex<>("A"), new Vertex<>("B"), 0);
+        graph.addEdge("A", "B", 0);
 
         assertEquals(1, graph.getEdges().size());
         assertEquals(2, graph.getVertexes().size());
@@ -28,7 +28,7 @@ public class GraphTest {
     @Test
     public void testAddingEdge() throws Exception {
         Graph<String> graph = new Graph<>();
-        graph.addEdge(new Edge<>(new Vertex<>("A"), new Vertex<>("B"), 0));
+        graph.addEdge(new Edge<>("A", "B", 0));
 
         assertEquals(1, graph.getEdges().size());
         assertEquals(2, graph.getVertexes().size());
