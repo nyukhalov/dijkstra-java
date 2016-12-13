@@ -31,4 +31,25 @@ public class Edge<T> {
     public int getWeight() {
         return weight;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Edge)) return false;
+
+        Edge<?> edge = (Edge<?>) o;
+
+        if (getWeight() != edge.getWeight()) return false;
+        if (!getSource().equals(edge.getSource())) return false;
+        return getDestination().equals(edge.getDestination());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getSource().hashCode();
+        result = 31 * result + getDestination().hashCode();
+        result = 31 * result + getWeight();
+        return result;
+    }
 }

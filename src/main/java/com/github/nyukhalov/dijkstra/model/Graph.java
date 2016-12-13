@@ -1,18 +1,16 @@
 package com.github.nyukhalov.dijkstra.model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Graph<T> {
-    private final List<Vertex<T>> vertexes = new ArrayList<>();
-    private final List<Edge<T>> edges = new ArrayList<>();
+    private final Set<Vertex<T>> vertexes = new HashSet<>();
+    private final Set<Edge<T>> edges = new HashSet<>();
 
-    public List<Vertex<T>> getVertexes() {
+    public Set<Vertex<T>> getVertexes() {
         return vertexes;
     }
 
-    public List<Edge<T>> getEdges() {
+    public Set<Edge<T>> getEdges() {
         return edges;
     }
 
